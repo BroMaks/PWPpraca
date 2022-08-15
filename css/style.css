@@ -59,7 +59,7 @@ img {
     height: 100px;
     background: #fff;
     opacity: 0.9;
-    
+    top: 0;
 }
 
 .logo {
@@ -87,6 +87,10 @@ h1 {
 
 /*Кнопки МЕНЮ конец*/
 
+main {
+    margin-bottom: 100px;
+}
+
 .choice-d {
     display: flex;
 }
@@ -94,7 +98,14 @@ h1 {
 .item {
     width: 49%;
     margin: 5px;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
+    opacity: 0;
+    transition: all 1.5s ease 0s;
+}
+
+.item._active {
+    transform: translate(0px, 100px);
+    opacity: 1;
 }
 
 .item button {
@@ -233,3 +244,32 @@ hr {
 }
 
 /*FOOTER-END*/
+
+@media (max-width: 1400px) {
+    .choice-d {
+        display: block;
+    }
+
+    .item {
+        width: 100%;
+        
+    }
+
+    .item button {
+        background-image: url(../img/pracownik-media.jpg);
+    }
+
+    .imagenew button {
+        background-image: url(../img/collega-media.jpg);
+    }
+
+    .item buttom:active {
+        border-color: #fff;
+        border-width: 10px;
+        cursor: pointer;
+    }
+
+    main {
+        margin-bottom: 115px;
+    }
+}
